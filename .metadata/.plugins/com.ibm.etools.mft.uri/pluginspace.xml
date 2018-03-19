@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pluginspace>
+<plugin id="JobSchedulerExecuterNode" version="1.0.0"/>
+<plugin id="com.ibm.etools.mft.mapping.codegen.esql" version="7.0.701.v20140819_0927"/>
+</pluginspace>

@@ -1,0 +1,4 @@
+#Mon Mar 19 17:26:19 IST 2018
+module-start-timeout=300000
+runtimes=<?xml version\="1.0" encoding\="UTF-8"?><runtimes>\r\n  <runtime id\="com.ibm.ws.ast.st.runtime.v61.mb" id-set\="true" location\="C\:/Program Files (x86)/IBM/WMBT700/runtimes/mb_v61_stub" locked\="true" name\="WebSphere Message Broker stub" runtime-type-id\="com.ibm.ws.ast.st.runtime.v61.mb" stub\="true" timestamp\="0"/>\r\n</runtimes>
+eclipse.preferences.version=1
