@@ -2,7 +2,7 @@
 <project name="build" default="run">
 <target name="run" description="">
 <property name="builddir" value="C:\work\sample"></property>
-<property name="workspacedir" value="C:\work\Test"></property>
+<property name="workspacedir" value="C:\work\Test1"></property>
 <property name="barname" value="${builddir}\DistMulti.bar"></property>
 <property name="home" value="C:\Program Files (x86)\IBM\WMBT700" />
 <antcall target="mqsicreatebar.buildbar"/>
