@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
 <project name="build" default="run">
 <target name="run" description="">
-<property name="builddir" value="C:\work\sample"></property>
-<property name="workspacedir" value="C:\work\Test1"></property>
+<property name="workspacedir" value="C:\work\Test"></property>
 <property name="barname" value="DistMulti.bar"></property>
 <property name="home" value="C:\Program Files (x86)\IBM\WMBT700" />
 <property name="deployhome" value="C:\Program Files (x86)\IBM\MQSI\7.0\bin"/>
 <property name="brokerName" value="ACH"/>
 <property name="egname" value="test"/>
 <property name="jendir" value="C:\Program Files (x86)\Jenkins\workspace\MultiDestination\Destination"/>
-<antcall target="mqsicreatebar.buildbar"/>
+<antcall target="mqsideploybar.deploybar"/>
 </target>
 
 <target name="mqsicreatebar.buildbar">
@@ -29,10 +28,9 @@
 <echo message="Completed building Broker Archive file - ${barname} " />
 </target>
 
-<target name="mqsideploybar.deploybar">
+<target name="mqsideploybar.deploybar" depends="mqsicreatebar.buildbar">
 <echo message="deploying bar file ${barname}"/>
-<exec executable="${deployhome}\mqsideploy.bat" spawn="false">
-	<arg value="-n" />
+<exec executable="${deployhome}\mqsideployscript.bat" spawn="false">
 	<arg value="${brokerName}" />
 	<arg value="-e" />
 	<arg value="${egname}" />
