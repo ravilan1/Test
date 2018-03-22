@@ -7,7 +7,7 @@
 <property name="deployhome" value="C:\Program Files (x86)\IBM\MQSI\7.0\bin"/>
 <property name="brokerName" value="ACH"/>
 <property name="egname" value="test"/>
-<property name="jendir" value="C:\Program Files (x86)\Jenkins\workspace\MultiDestination\Destination"/>
+<property name="jendir" value="C:\Program Files (x86)\Jenkins\workspace\MultiDestination"/>
 <antcall target="mqsideploybar.deploybar"/>
 </target>
 
@@ -31,7 +31,7 @@
 <target name="mqsideploybar.deploybar" depends="mqsicreatebar.buildbar">
 <echo message="deploying bar file ${barname}"/>
 <echo message="${deployhome}\mqsideployscript.bat ${brokerName} -e ${egname}
-              -a  ${jendir}\${barname} --m -w 600" />
+              -a  ${jendir}\${barname} -m -w 600" />
 <exec executable="${deployhome}\mqsideployscript.bat" spawn="false">
 	<arg value="${brokerName}" />
 	<arg value="-e" />
