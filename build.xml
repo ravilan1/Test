@@ -30,6 +30,8 @@
 
 <target name="mqsideploybar.deploybar" depends="mqsicreatebar.buildbar">
 <echo message="deploying bar file ${barname}"/>
+<echo message="${deployhome}\mqsideployscript.bat ${brokerName} -e ${egname}
+              -a  ${jendir}\${barname} --m -w 600" />
 <exec executable="${deployhome}\mqsideployscript.bat" spawn="false">
 	<arg value="${brokerName}" />
 	<arg value="-e" />
