@@ -28,7 +28,7 @@
 <echo message="Completed building Broker Archive file - ${barname} " />
 </target>
 
-<target name="mqsideploybar.deploybar" depends="mqsicreatebar.buildbar">
+<target name="mqsideploybar.deploybar">
 <echo message="deploying bar file ${barname}"/>
 <echo message="${deployhome}\mqsideployscript.bat ${brokerName} -e ${egname}
               -a  ${jendir}\${barname} -m -w 600" />
