@@ -32,6 +32,7 @@
 <echo message="deploying bar file ${barname}"/>
 <echo message="${deployhome}\mqsideploy.exe ${brokerName} -e ${egname}
               -a  ${jendir}\${barname} -m -w 600" />
+<exec executable="${deployhome}\mqsiprofile.cmd" spawn="false"></exec>
 <exec executable="${deployhome}\mqsideploy.exe" spawn="false">
 	<arg value="${brokerName}" />
 	<arg value="-e" />
