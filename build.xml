@@ -11,11 +11,6 @@
 <antcall target="mqsideploybar.deploybar"/>
 </target>
 
-<target name="mqsiprofile">
-<echo message="running profile command"/>
-     <exec executable="${deployhome}\mqsiprofile.cmd" />
-</target>
-
 <target name="mqsicreatebar.buildbar">
 <echo message="Creating bar file ${barname}"/>
 <echo message="${home}\mqsicreatebar.exe -data ${workspacedir}
@@ -33,21 +28,15 @@
 <echo message="Completed building Broker Archive file - ${barname} " />
 </target>
 
-<target name="mqsideploybar.deploybar" depends="mqsiprofile">
+<target name="mqsideploybar.deploybar">
 <echo message="deploying bar file ${barname}"/>
-<echo message="${deployhome}\mqsideploy.exe ${brokerName} -e ${egname}
+<echo message="${deployhome}\mqsideployscript.exe ${brokerName} -e ${egname}
               -a  ${jendir}\${barname} -m -w 600" />
-<exec executable="${deployhome}\mqsideploy.exe" spawn="false">
-	<arg value="${brokerName}" />
-	<arg value="-e" />
-	<arg value="${egname}" />
-	<arg value="-a" />
-	<arg value="${jendir}\${barname}" />
-	<arg value="-m" />
-	<arg value="-w" />
-	<arg value="600" />
+<echo message="deployment bar file"/>
+<exec dir ="${deployhome}" executable="cmd" os="Windows 7">
+	<arg line="/c Mqsibacth.cmd ${brokerName} -e ${egname} -a '${jendir}\${barname}' -m -w 600" />
 </exec>
-<echo message="Completed deployment of Broker Archive file - ${jendir}\${barname} " />
+<echo message="deployment completed"/>
 </target>
 
 </project>
