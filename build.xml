@@ -11,6 +11,10 @@
 <antcall target="mqsideploybar.deploybar"/>
 </target>
 
+<target name="mqsiprofile">
+     <exec executable="${deployhome}\mqsiprofile.cmd" />
+</target>
+
 <target name="mqsicreatebar.buildbar">
 <echo message="Creating bar file ${barname}"/>
 <echo message="${home}\mqsicreatebar.exe -data ${workspacedir}
@@ -28,11 +32,10 @@
 <echo message="Completed building Broker Archive file - ${barname} " />
 </target>
 
-<target name="mqsideploybar.deploybar">
+<target name="mqsideploybar.deploybar" depends="mqsiprofile">
 <echo message="deploying bar file ${barname}"/>
 <echo message="${deployhome}\mqsideploy.exe ${brokerName} -e ${egname}
               -a  ${jendir}\${barname} -m -w 600" />
-<exec executable="${deployhome}\mqsiprofile.cmd" spawn="false"></exec>
 <exec executable="${deployhome}\mqsideploy.exe" spawn="false">
 	<arg value="${brokerName}" />
 	<arg value="-e" />
@@ -43,7 +46,7 @@
 	<arg value="-w" />
 	<arg value="600" />
 </exec>
-<echo message="Completed building Broker Archive file - ${jendir}\${barname} " />
+<echo message="Completed deployment of Broker Archive file - ${jendir}\${barname} " />
 </target>
 
 </project>
