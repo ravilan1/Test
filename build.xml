@@ -12,6 +12,7 @@
 </target>
 
 <target name="mqsiprofile">
+<echo message="running profile command"/>
      <exec executable="${deployhome}\mqsiprofile.cmd" />
 </target>
 
