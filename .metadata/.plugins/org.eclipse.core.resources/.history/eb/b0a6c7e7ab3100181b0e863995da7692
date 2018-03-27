@@ -1,0 +1,19 @@
+package com.ibm;
+
+public class Java {
+	String directory = null;
+	String configPath = null;
+	
+	public void gettingConfigDetails(){
+		directory = System.getProperty("user.dir");
+		System.out.println(directory);
+		
+		
+	}
+	
+	
+	public static void main(String args[]){
+		
+	}
+
+}

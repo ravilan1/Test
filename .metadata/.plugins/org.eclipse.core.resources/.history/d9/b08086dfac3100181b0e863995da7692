@@ -1,0 +1,24 @@
+package com.ibm;
+
+import java.io.BufferedReader;
+
+public class Java {
+	String directory = null;
+	String configPath = null;
+	BufferedReader br = null;
+	
+	public void gettingConfigDetails(){
+		directory = System.getProperty("user.dir");
+		System.out.println(directory);
+		configPath = directory + "\\" + "config.txt";
+		System.out.println(configPath);
+		
+	}
+	
+	
+	public static void main(String args[]){
+		Java ja = new Java();
+		ja.gettingConfigDetails();
+	}
+
+}

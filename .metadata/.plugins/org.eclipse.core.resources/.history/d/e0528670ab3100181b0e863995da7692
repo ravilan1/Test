@@ -1,0 +1,9 @@
+package com.ibm;
+
+public class Java {
+	
+	public static void main(String args[]){
+		String directory = System.getProperty("usr.dir");
+	}
+
+}

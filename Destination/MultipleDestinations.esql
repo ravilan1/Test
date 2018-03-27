@@ -5,8 +5,8 @@ CREATE COMPUTE MODULE MultipleDestinations_Compute
 	BEGIN
 		 --CALL CopyMessageHeaders();
 		 CALL CopyEntireMessage();
-		 SET OutputLocalEnvironment.Destination.MQ.DestinationData[1].queueName='out';
-		 SET OutputLocalEnvironment.Destination.MQ.DestinationData[2].queueName='out1';
+		 /*SET OutputLocalEnvironment.Destination.MQ.DestinationData[1].queueName='out';
+		 SET OutputLocalEnvironment.Destination.MQ.DestinationData[2].queueName='out1';*/
 		RETURN TRUE;
 	END;
 
