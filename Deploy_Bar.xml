@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<project name="build" default="run">
-<target name="run" description="">
+<project name="build" default="Deploy">
+<target name="Deploy" description="">
 <property name="workspacedir" value="C:\work\Test"></property>
 <property name="barname" value="DistMulti.bar"></property>
 <property name="home" value="C:\Program Files (x86)\IBM\WMBT700" />

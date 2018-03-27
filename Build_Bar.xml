@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project name="build" default="building">
+<target name="building" description="">
+<property name="workspacedir" value="C:\work\Test"></property>
+<property name="barname" value="DistMulti.bar"></property>
+<property name="home" value="C:\Program Files (x86)\IBM\WMBT700" />
+<property name="deployhome" value="C:\Program Files (x86)\IBM\MQSI\7.0\bin"/>
+<property name="brokerName" value="ACH"/>
+<property name="egname" value="test"/>
+<property name="jendir" value="C:\Program Files (x86)\Jenkins\workspace\MultiDestination"/>
+<antcall target="mqsicreatebar.buildbar"/>
+</target>
+
+<target name="mqsicreatebar.buildbar">
+<echo message="Creating bar file ${barname}"/>
+<echo message="${home}\mqsicreatebar.exe -data ${workspacedir}
+              -b  ${barname} -p Destination -o Destination\MultipleDestinations.msgflow" />
+<exec executable="${home}\mqsicreatebar.exe" spawn="false">
+	<arg value="-data" />
+	<arg value="${workspacedir}" />
+	<arg value="-b" />
+	<arg value="${barname}" />
+	<arg value="-p" />
+	<arg value="Destination" />
+	<arg value="-o" />
+	<arg value="Destination\MultipleDestinations.msgflow" />
+</exec>
+<echo message="Completed building Broker Archive file - ${barname} " />
+</target>
+
+<target name="mqsideploybar.deploybar">
+<echo message="deploying bar file ${barname}"/>
+<echo message="${deployhome}\mqsideployscript.exe ${brokerName} -e ${egname}
+              -a  ${jendir}\${barname} -m -w 600" />
+<echo message="deployment bar file"/>
+<exec dir ="${deployhome}" executable="cmd" os="Windows 7">
+	<arg line="/c Mqsibacth.cmd ${brokerName} -e ${egname} -a '${jendir}\${barname}' -m -w 600" />
+</exec>
+<echo message="deployment completed"/>
+</target>
+
+</project>
