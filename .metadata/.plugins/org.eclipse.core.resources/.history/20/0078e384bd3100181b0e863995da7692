@@ -1,0 +1,46 @@
+*
+* name of the queue and queue manager
+* to read messages from
+*
+qname=out
+qmgr=SYSTEM.BKR.CONFIG/TCP/IBM121-PC05NTYU(1414)
+* maximum number of messages to be read
+* from the input queue.  The program
+* will stop when the queue is drained
+* or this number of messages have been read
+*
+msgcount=1
+*
+* delimiter and delimiterx are used to
+* define the message seperator sequence.
+*
+delimiter="#@%@#"
+*delimiterx="0D0A"
+*
+* striprfh parameter determines if RFH
+* headers are to be written to the 
+* data file along with the message
+* data or removed from the message
+*
+striprfh=N
+*
+* IndivFiles parameter determines if each
+* message is put in a separate file.  If
+* this parameter is used then the delimiter
+* is ignored.
+*
+indivfiles=Y
+*
+* readonly parameter determines if messages 
+* are read or browsed.  If it is set to Y
+* then messages will remain on the queue
+* after they are captured
+*
+readonly=N
+*
+* saveMQMD parameter determines if the MQMD
+* is saved along with the data from a message
+*
+saveMQMD=N
+outputFilename=C:\Users\IBM_ADMIN\Documents\SametimeFileTransfers\JUNIT\JUNIT\TMH_Tester_JUnit/TestPack\output\Regression_Testing_15.2\SS15\SCAR IBAN\IFW_RCBS_Request_For_1Account.xml
+earing8.xml

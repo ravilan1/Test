@@ -1,0 +1,88 @@
+//TMH_Tester_JUnit Config v1.0
+//Last Update 18/11/2015
+//Inputs: ReferenceID,pathToFile,Input Queue,Target Queue 
+//Start of Config
+//**************************************************************************************************************
+RFHUtilPath=C:\rfhUtil\ih03_RFHutil\
+mqPutParameterFile= C:\Users\IBM_ADMIN\Documents\SametimeFileTransfers\JUNIT\JUNIT\TMH_Tester_JUnit\environment\local\get_config.txt
+mqGetParameterFile= C:\Users\IBM_ADMIN\Documents\SametimeFileTransfers\JUNIT\JUNIT\TMH_Tester_JUnit\environment\local\get_config.txt
+//*******************************SCAR IBAN Messages for test***************************************************
+101,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_RCBS_Request_For_1Account.xml,in,out
+//102,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_RCBS_Request_For_1AccountWarning.xml,ACH_AIS_CORE_REQ_PHY,in
+//103,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_RCBS_Request_For_2Account.xml,ACH_AIS_CORE_REQ_PHY,in
+//104,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_RCBS_Request_For_2AccountWithError.xml,ACH_AIS_CORE_REQ_PHY,in
+//105,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_RCBS_Request_For_10Account.xml,ACH_AIS_CORE_REQ_PHY,in
+//106,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_COMMONAccountRequestfor10Accounts2ndAccountFail.xml,ACH_AIS_CORE_REQ_PHY,in
+//107,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_COMMONAccountRequestfor10AccountsAllAccountFail.xml,ACH_AIS_CORE_REQ_PHY,in
+//108,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_COMMONAccountRequestfor10AccountsFirstAccountFail.xml,ACH_AIS_CORE_REQ_PHY,in
+//109,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_COMMONSingleAccountErrorRequest.xml,ACH_AIS_CORE_REQ_PHY,in
+//110,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_COMMONSingleAccountRequest.xml,ACH_AIS_CORE_REQ_PHY,in
+//111,Regression_Testing_15.2\SS15\SCAR IBAN\IFW_COMMONSRequest2AccountRequest.xml,ACH_AIS_CORE_REQ_PHY,in
+//*******************************TS2 Messages for test*************************************
+//201,Regression_Testing_15.2\SS15\TS2\WCBS_IFW_Batch.xml,ACH_APS_ACC_POST_REQ_PHY,in
+//202,Regression_Testing_15.2\SS15\TS2\WCBS_IFW_Batch_COL.xml,ACH_APS_ACC_POST_REQ_PHY,in
+//*******************************FCM Messages for test*************************************
+//301,Regression_Testing_15.2\SS15\FCM\AGG_CAP_CRE_InClearing25.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//302,Regression_Testing_15.2\SS15\FCM\AGG_CNP_E596_OutClearing10.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//303,Regression_Testing_15.2\SS15\FCM\AGG_CRE_E596_OutClearing9.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//304,Regression_Testing_15.2\SS15\FCM\AGG_CS_CRE_HOCA_InClearing42.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//305,Regression_Testing_15.2\SS15\FCM\AGG_CS_CRE_InClearing41.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//306,Regression_Testing_15.2\SS15\FCM\AGG_CS_DEB__InClearing37.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//307,Regression_Testing_15.2\SS15\FCM\AGG_CS_DNP__InClearing39.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//308,Regression_Testing_15.2\SS15\FCM\AGG_DEB_ONLINE_InClearing4.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//309,Regression_Testing_15.2\SS15\FCM\AGG_NCA_CR_HBC_InClearing32.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//310,Regression_Testing_15.2\SS15\FCM\AGG_NCA_DR_InClearing27.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//311,Regression_Testing_15.2\SS15\FCM\AGG_NCA_Inputfile_CR_InClearing30.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//312,Regression_Testing_15.2\SS15\FCM\AGG_NCA_Inputfile_CR_InClearing31.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//313,Regression_Testing_15.2\SS15\FCM\AGG_NCA_Inputfile_DR_InClearing26.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//314,Regression_Testing_15.2\SS15\FCM\AGG_NCA_Inputfile_DR_InClearing28.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//315,Regression_Testing_15.2\SS15\FCM\AGG_rCBS_CRE_E609_InClearing13.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//316,Regression_Testing_15.2\SS15\FCM\AGG_rCBS_E596_InClearing12.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//317,Regression_Testing_15.2\SS15\FCM\AGG_rCBSbatch_DNP_InClearing5.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//318,Regression_Testing_15.2\SS15\FCM\AGG_Trigger_IFW_CAP.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//319,Regression_Testing_15.2\SS15\FCM\AGG_Trigger_IFW_CAP_InClearing22.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//320,Regression_Testing_15.2\SS15\FCM\AGG_Trigger_IFW_NCA_CR_HBC.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//321,Regression_Testing_15.2\SS15\FCM\DEB_ONLINE_E611_InClearing6.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//322,Regression_Testing_15.2\SS15\FCM\DNP_CAP_InClearing24.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//323,Regression_Testing_15.2\SS15\FCM\EOD_CAP_InClearing23.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//323,Regression_Testing_15.2\SS15\FCM\EOD_IFCA_InClearing33.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//324,Regression_Testing_15.2\SS15\FCM\EOD_rCBSbatch_DEB_InClearing3.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//325,Regression_Testing_15.2\SS15\FCM\EOD_Trigger_IFW_IFCA.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//326,Regression_Testing_15.2\SS15\FCM\EOD_Trigger_IFW_rCBSbatch.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//327,Regression_Testing_15.2\SS15\FCM\EOD_Trigger_IFW_rCBSbatch_InClearing1.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//328,Regression_Testing_15.2\SS15\FCM\EOD_Trigger_IFW_rCBSbatch_InClearing2.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//329,Regression_Testing_15.2\SS15\FCM\rCBS_DNP_E609_InClearing8.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//330,Regression_Testing_15.2\SS15\FCM\rCBS_CRE_E609_InClearing10.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//331,Regression_Testing_15.2\SS15\FCM\IMM_ADJ_E596_OutClearing4.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//332,Regression_Testing_15.2\SS15\FCM\IMM_CNP_E611_OutClearing2.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//333,Regression_Testing_15.2\SS15\FCM\IMM_CS_CRE__InClearing40.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//334,Regression_Testing_15.2\SS15\FCM\IMM_CS_DNP__InClearing38.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//335,Regression_Testing_15.2\SS15\FCM\IMM_DCR_E609_OutClearing5.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//336,Regression_Testing_15.2\SS15\FCM\TT6_CS_DEB__InClearing36.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//337,Regression_Testing_15.2\SS15\FCM\TT6_WCBS_DEB_InClearing16.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//338,Regression_Testing_15.2\SS15\FCM\IMM_DNP_WCBS_ONLINE_InClearing19.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//339,Regression_Testing_15.2\SS15\FCM\IMM_DEB_WCBS_ONLINE_InClearing18.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//340,Regression_Testing_15.2\SS15\FCM\IMM_IFW_WCBS_ONLINE_InClearing21.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//341,Regression_Testing_15.2\SS15\FCM\IMM_LDC_E613_OutClearing1.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//342,Regression_Testing_15.2\SS15\FCM\IMM_NPA_E596_OutClearing8.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//343,Regression_Testing_15.2\SS15\FCM\IMM_REJ_E613_OutClearing3.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//344,Regression_Testing_15.2\SS15\FCM\TT2_IFMidtier_InClearing35.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//345,Regression_Testing_15.2\SS15\FCM\Rollup_Trigger_IFW_RCBS_E596.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//346,Regression_Testing_15.2\SS15\FCM\TT2_Trigger_IFW_IFMidtier.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//347,Regression_Testing_15.2\SS15\FCM\TT6_Trigger_IFW_CS.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//348,Regression_Testing_15.2\SS15\FCM\TT6_Trigger_IFW_WCBS.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//349,Regression_Testing_15.2\SS15\FCM\IFW_RCBS_E596.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//350,Regression_Testing_15.2\SS15\FCM\IFW_RCBS_E609.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//351,Regression_Testing_15.2\SS15\FCM\IFW_RCBS_E610.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//352,Regression_Testing_15.2\SS15\FCM\IFW_RCBS_E611.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//353,Regression_Testing_15.2\SS15\FCM\IFW_RCBS_E613.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//354,Regression_Testing_15.2\SS15\FCM\IFW_Common_AGG_DEB.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//355,Regression_Testing_15.2\SS15\FCM\IFW_Input_PODS.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//356,Regression_Testing_15.2\SS15\FCM\IMM_ADJ_E596_InClearing43.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//357,Regression_Testing_15.2\SS15\FCM\AGG_NCA_Inputfile_DR_InClearing29.xml,ACH_TXB_ADPT_APS_ACC_POST_REQ_PHY,in
+//*******************************FCM trigger Messages for test**************************************
+//358,Regression_Testing_15.2\SS15\FCM\Trigger\AGGTriggerCtrlReq.xml,ACH_TRIGGER_REQ_PHY,in
+//359,Regression_Testing_15.2\SS15\FCM\Trigger\EODTriggerCtrlReq.xml,ACH_TRIGGER_REQ_PHY,in
+//360,Regression_Testing_15.2\SS15\FCM\Trigger\ROLLTriggerCtrlReq.xml,ACH_TRIGGER_REQ_PHY,in
+//361,Regression_Testing_15.2\SS15\FCM\Trigger\TT2TriggerCtrlReq.xml,ACH_TRIGGER_REQ_PHY,in
+//362,Regression_Testing_15.2\SS15\FCM\Trigger\TT6TriggerCtrlReq.xml,ACH_TRIGGER_REQ_PHY,in
