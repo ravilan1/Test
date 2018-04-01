@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.lloydstsb.com/Schema/AccountingHub/getTriggerControl">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<get:GetTriggerControlRequest>
+			<get:RequestId>11000111112EOD</get:RequestId>
+			<get:SourceSystem>IPSL</get:SourceSystem>
+			<get:TriggerType>EOD</get:TriggerType>
+                        <get:EventDate>2016-01-27</get:EventDate>
+			<get:PaymentScheme>ICS</get:PaymentScheme>
+			<get:IsReTrigger>false</get:IsReTrigger>
+		</get:GetTriggerControlRequest>
+	</soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,116 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://www.lloydstsb.com/Schema/Infrastructure/SOAP" xmlns:IFWXML_Event="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Event" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:ifw="http://www.lloydstsb.com/Schema/ArrangementAccountProcessing/IFW" xmlns:ifw2="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML" xmlns:ifw1="http://www.lloydstsb.com/Schema/Enterprise/IFWXML_Extended_Classes" xmlns:ifw3="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Common" xmlns:ifw4="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Event" xmlns:ifw5="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_InvolvedParty" xmlns:ifw6="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Arrangement" xmlns:ifw7="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_AccountingUnit" xmlns:ifw8="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_AccountingTransaction" xmlns:ifw9="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Product" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Header>
+		<soap:ContactPoint soap:mustReturn="true">
+			<soap:ContactPointType>token</soap:ContactPointType>
+			<soap:ContactPointId>token</soap:ContactPointId>
+			<soap:ApplicationId>token</soap:ApplicationId>
+			<soap:InitialOriginatorType>token</soap:InitialOriginatorType>
+			<soap:InitialOriginatorId>CE1000</soap:InitialOriginatorId>
+			<soap:OperatorType>Customer</soap:OperatorType>
+		</soap:ContactPoint>
+		<oas:Security mustReturn="true">
+			<oas:UsernameToken oas:UNPMechanismType="ClearTrust" oas:UserType="" Id="LloydsTSBSecurityToken">
+				<oas:Username>String</oas:Username>
+				<oas:Password PasswordEnumType="Digest">String</oas:Password>
+			</oas:UsernameToken>
+		</oas:Security>
+		<soap:ServiceRequest soap:mustReturn="true">
+			<soap:ServiceName>String</soap:ServiceName>
+			<soap:Action>Y</soap:Action>
+			<soap:From>TMH_TxnBus</soap:From>
+			<soap:MessageId>token</soap:MessageId>
+		</soap:ServiceRequest>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ifw:ApplyPaymentPostingRequest>
+			<requestHeader>
+				<ifw1:id>abc123</ifw1:id>
+				<ifw1:datasourceName>TBTSOC</ifw1:datasourceName>
+				<ifw1:environment>String</ifw1:environment>
+			</requestHeader>
+			<accountingTransaction xsi:type="ifw8:Transfer">
+				<ifw3:objectReference xsi:type="ifw8:TransferObjectReference">
+					<ifw3:alternateId>
+						<ifw3:attributeString>DEBIT_SERIAL_NUM</ifw3:attributeString>
+						<ifw3:value>999901</ifw3:value>
+					</ifw3:alternateId>
+					<ifw3:alternateId>
+						<ifw3:attributeString>REMITTER_INFORMATION</ifw3:attributeString>
+						<ifw3:value>99</ifw3:value>
+					</ifw3:alternateId>
+					
+					<ifw3:alternateId>
+						<ifw3:attributeString>ACCOUNT_SWITCH_SORTCODE</ifw3:attributeString>
+						<ifw3:value>239087</ifw3:value>
+					</ifw3:alternateId>
+					<ifw3:alternateId>
+						<ifw3:attributeString>ACCOUNT_SWITCH_ACC_NUM</ifw3:attributeString>
+						<ifw3:value>75555991</ifw3:value>
+					</ifw3:alternateId>
+					<ifw3:alternateId>
+						<ifw3:attributeString>POSTING_DAY</ifw3:attributeString>
+						<ifw3:value>01</ifw3:value>
+					</ifw3:alternateId>
+					<ifw8:reversalTransactionReferenceNumber>String</ifw8:reversalTransactionReferenceNumber>
+					<ifw8:reversalTransactionReturnCode>String</ifw8:reversalTransactionReturnCode>
+				</ifw3:objectReference>
+				<ifw4:description>jhghjgghjPrincipal Credit9</ifw4:description>
+				<ifw4:hasEventType>
+					<ifw3:name>Principal Credit</ifw3:name>
+				</ifw4:hasEventType>
+				<ifw8:accountingTransactionSource>Post</ifw8:accountingTransactionSource>
+				<ifw8:originationDate>2016-05-11T09:30:47</ifw8:originationDate>
+				<ifw8:transactionItemType>11</ifw8:transactionItemType>
+				<ifw8:initiatesMonetaryPosting>
+					<ifw7:accountingEffectType>Credit</ifw7:accountingEffectType>
+					<ifw7:effectiveDate>2016-05-11T09:30:47</ifw7:effectiveDate>
+					<ifw7:amount>
+						<ifw2:theCurrencyAmount>30.00</ifw2:theCurrencyAmount>
+						<ifw2:theCurrencyCode>GBP</ifw2:theCurrencyCode>
+					</ifw7:amount>
+				</ifw8:initiatesMonetaryPosting>
+				<ifw8:targets>
+					<ifw3:objectReference xsi:type="ifw6:ProductArrangementObjectReference">
+						<ifw6:accountNumber>40000026</ifw6:accountNumber>
+					</ifw3:objectReference>
+					<ifw6:isManagedByOrgUnit xsi:type="ifw5:Branch">
+						<ifw5:sortCode>239087</ifw5:sortCode>
+					</ifw6:isManagedByOrgUnit>
+					<ifw6:conditions xsi:type="ifw9:ExchangeRateCondition">
+						<ifw9:rate>0.0</ifw9:rate>
+					</ifw6:conditions>
+					<ifw6:customer>
+						<ifw5:customerName>
+							<ifw5:nameText>Name</ifw5:nameText>
+						</ifw5:customerName>
+					</ifw6:customer>
+				</ifw8:targets>
+			</accountingTransaction>
+			<paymentPostingInstruction>
+				<ifw3:objectReference xsi:type="ifw8:PaymentPostingInstructionObjectReference">
+					<ifw3:refId>EOD_rCBSbatch_DEB_InCl3</ifw3:refId>
+					<ifw3:alternateId>
+						<ifw3:attributeString>ACCOUNT_TYPE</ifw3:attributeString>
+						<ifw3:value>Personal Account</ifw3:value>
+					</ifw3:alternateId>
+					<ifw3:alternateId>
+						<ifw3:attributeString>CHEQUE_CREDITS_NO</ifw3:attributeString>
+						<ifw3:value>10</ifw3:value>
+					</ifw3:alternateId>
+				</ifw3:objectReference>
+				<ifw8:scheme>
+					<ifw3:objectReference xsi:type="ifw8:PaymentSchemeObjectReference">
+						<ifw8:settlementId>String</ifw8:settlementId>
+					</ifw3:objectReference>
+					<ifw8:schemeName>ICS</ifw8:schemeName>
+				</ifw8:scheme>
+				<ifw8:transactionType>DEB</ifw8:transactionType>
+			</paymentPostingInstruction>
+			<paymentExceptionInstruction>
+				<ifw8:originalSettlementAmount>
+					<ifw2:theCurrencyAmount>30.00</ifw2:theCurrencyAmount>
+				</ifw8:originalSettlementAmount>
+			</paymentExceptionInstruction> 
+		</ifw:ApplyPaymentPostingRequest>
+	</soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,7 @@
+In previous versions of the MQCapture utility there was a bug.  If a message is stored in a file and the MQMD was stored with the message then the MQMD that was stored was always 364 bytes in length.  This causes a problem if the MQMD is actually a version 1 MQMD, which is only 324 bytes in length.  As a result the mqput2 or mqputs programs would recognize the MQMD version and assume the data started after 324 bytes.  If the data started with an RFH header than a error 2142 would be created by the queue manager.  If the message did not include an RFH2 header than the message would be incorrect, since it would include an addition 40 bytes of data in front of the actual user data.
+
+This problem has been fixed in the current version of the utilities.  However it may be necessary to correct some data files that were captured using the earlier incorrect capture program.  The correction is to change the MQMD version from a binary 1 to a binary 2.  
+
+There are other changes in the utilities themselves.  All utilities now accept a common parameters file.  This allows the same file to be used by the driver as well as the consuming applications.  In addition the command line arguments are now common for all programs.  Parameters or arguments that do not apply to a particular utility will be recognized but ignored.
+
+The capture programs will now always capture the MQMD with the message data unless the ignoreMQMD parameter is set to a 1 (or Y) is specified in the parameters file.

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:Ifw="http://www.lloydstsb.com/Schema/ArrangementReporting/IFW" xmlns:ifwex="http://www.lloydstsb.com/Schema/Enterprise/IFWXML_Extended_Classes" xmlns:com="http://www.lloydstsb.com/Schema/Enterprise/IFWXML_Common" xmlns:arr="http://www.lloydstsb.com/Schema/Enterprise/IFWXML_Arrangement" xmlns:ip="http://www.lloydstsb.com/Schema/Enterprise/IFWXML_InvolvedParty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://www.lloydstsb.com/Schema/Infrastructure/SOAP" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:ri="http://www.lloydstsb.com/Schema/Enterprise/IFWXML_ResourceItem">
+	<soapenv:Header>
+		<soap:ContactPoint soap:mustReturn="false">
+			<soap:ContactPointType>003</soap:ContactPointType>
+			<soap:ContactPointId>804940</soap:ContactPointId>
+			<soap:ApplicationId>TBTSOC</soap:ApplicationId>
+			<soap:InitialOriginatorType>Browser</soap:InitialOriginatorType>
+			<soap:InitialOriginatorId>10.245.217.76</soap:InitialOriginatorId>
+			<soap:OperatorType>Staff</soap:OperatorType>
+		</soap:ContactPoint>
+		<oas:Security mustReturn="false">
+			<oas:UsernameToken oas:UNPMechanismType="IB" oas:UserType="010" Id="LloydsTSBSecurityToken">
+				<oas:Username>11113</oas:Username>
+			</oas:UsernameToken>
+		</oas:Security>
+		<soap:ServiceRequest soap:mustReturn="false">
+			<soap:ServiceName>RetrievePostingArrangementDetails</soap:ServiceName>
+			<soap:Action>ACHUB</soap:Action>
+			<soap:From>10.240.12.58</soap:From>
+			<soap:MessageId>COMMON-vAOWxEDwLtLJEJcqq11</soap:MessageId>
+		</soap:ServiceRequest>
+	</soapenv:Header>
+	<soapenv:Body>
+		<Ifw:RetrievePostingArrangementsDetailsRequest>
+			<requestHeader>
+				<ifwex:cmdType>request</ifwex:cmdType>
+				<ifwex:datasourceName>TBTSOC</ifwex:datasourceName>
+				<ifwex:requestGroup>
+					<ifwex:uniqueSequenceNumber>COMMON-vAOWxEDwLtLJEJcqq11</ifwex:uniqueSequenceNumber>
+				</ifwex:requestGroup>
+			</requestHeader>
+			<isIBANRequired>true</isIBANRequired>
+			<isIndicatorDetailsRequired>false</isIndicatorDetailsRequired>
+			<productArrangement>
+				<com:objectReference>
+					<com:id>22222250</com:id>
+				</com:objectReference>
+				<arr:initiatingOrganizationUnit xsi:type="ip:OrganizationUnit">
+					<com:objectReference xsi:type="ip:BranchIdentifier">
+						<ip:sortCode>306709</ip:sortCode>
+					</com:objectReference>
+				</arr:initiatingOrganizationUnit>
+			</productArrangement>
+			<productArrangement>
+				<com:objectReference>
+					<com:id>22222260</com:id>
+				</com:objectReference>
+				<arr:initiatingOrganizationUnit xsi:type="ip:OrganizationUnit">
+					<com:objectReference xsi:type="ip:BranchIdentifier">
+						<ip:sortCode>306709</ip:sortCode>
+					</com:objectReference>
+				</arr:initiatingOrganizationUnit>
+			</productArrangement>
+		</Ifw:RetrievePostingArrangementsDetailsRequest>
+	</soapenv:Body>
+</soapenv:Envelope>

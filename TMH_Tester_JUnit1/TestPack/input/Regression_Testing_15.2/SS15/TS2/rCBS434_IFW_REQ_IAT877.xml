@@ -1,0 +1,93 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:IFWXML_Arrangement="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Arrangement" xmlns:soap="http://schemas.xmlsoap.org/wsdl/" xmlns:IFWXML_Product="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Product" xmlns:IFWXML_ResourceItem="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_ResourceItem" xmlns:IFWXML_BusinessDirectionItem="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_BusinessDirectionItem" xmlns:IFWXML_WS="http://www.lloydstsb.com/Schema/ArrangementAccountProcessing/IFW" xmlns:IFWXML_AccountingUnit="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_AccountingUnit" xmlns:IFWXML_Communication="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Communication" xmlns:LTSB-SOAP="http://www.lloydstsb.com/Schema/Infrastructure/SOAP" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:IFWXML_Channel="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Channel" xmlns:IFWXML_AccountingTransaction="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_AccountingTransaction" xmlns:IFWXML_InvolvedParty="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_InvolvedParty" xmlns:IFWXML_Event="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Event" xmlns:IFWXML_Common="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Common" xmlns:IFWXML_Extnd="http://www.lloydstsb.com/Schema/Enterprise/IFWXML_Extended_Classes" xmlns:IFWXML="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML" xmlns:LTSB-INFR="http://www.lloydstsb.com/Schema/Infrastructure" xmlns:IFWXML_Location="http://xml.lloydsbanking.com/Schema/Enterprise/InformationTechnology/ESB/IFWXML_Location" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<SOAP-ENV:Header>
+<LTSB-SOAP:ServiceRequest>
+<LTSB-SOAP:ServiceName>http://www.lloydstsb.com/Schema/ArrangementAccountProcessing/IFW/ArrangementAccountProcessingService</LTSB-SOAP:ServiceName>
+<LTSB-SOAP:Action>N</LTSB-SOAP:Action>
+<LTSB-SOAP:From>TMH_TxnBus</LTSB-SOAP:From>
+<LTSB-SOAP:MessageId>1002369647</LTSB-SOAP:MessageId>
+</LTSB-SOAP:ServiceRequest>
+<wsse:Security>
+<wsse:UsernameToken Id="LloydsTSBSecurityToken" wsse:UNPMechanismType="LTPA" wsse:UserType="047">
+<wsse:Username>TMH_TxnBus</wsse:Username>
+<wsse:Password/>
+</wsse:UsernameToken>
+</wsse:Security>
+<LTSB-SOAP:ContactPoint>
+<LTSB-SOAP:ContactPointType>003</LTSB-SOAP:ContactPointType>
+<LTSB-SOAP:ContactPointId>0000122311</LTSB-SOAP:ContactPointId>
+<LTSB-SOAP:ApplicationId>AL05810</LTSB-SOAP:ApplicationId>
+<LTSB-SOAP:InitialOriginatorId>Transaction Bus</LTSB-SOAP:InitialOriginatorId>
+<LTSB-SOAP:OperatorType>Customer</LTSB-SOAP:OperatorType>
+</LTSB-SOAP:ContactPoint>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+<IFWXML_WS:ApplyPaymentPostingRequest>
+<accountingTransaction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IFWXML_AccountingTransaction:Transfer">
+<IFWXML_Event:description>1002369647               TO 06032943 122311       </IFWXML_Event:description>
+<IFWXML_AccountingTransaction:originationDate>2017-09-30T00:00:00</IFWXML_AccountingTransaction:originationDate>
+<IFWXML_AccountingTransaction:initiatesMonetaryPosting>
+<IFWXML_AccountingUnit:accountingEffectType>Debit</IFWXML_AccountingUnit:accountingEffectType>
+<IFWXML_AccountingUnit:effectiveDate>2017-09-30T00:00:00</IFWXML_AccountingUnit:effectiveDate>
+<IFWXML_AccountingUnit:amount>
+<IFWXML:theCurrencyAmount>30000.00</IFWXML:theCurrencyAmount>
+<IFWXML:theCurrencyCode>GBP</IFWXML:theCurrencyCode>
+</IFWXML_AccountingUnit:amount>
+</IFWXML_AccountingTransaction:initiatesMonetaryPosting>
+<IFWXML_AccountingTransaction:targets>
+<IFWXML_Common:objectReference xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IFWXML_Arrangement:ProductArrangementObjectReference">
+<IFWXML_Arrangement:accountNumber>00490006</IFWXML_Arrangement:accountNumber>
+</IFWXML_Common:objectReference>
+<IFWXML_Arrangement:isManagedByOrgUnit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IFWXML_InvolvedParty:Branch">
+<IFWXML_InvolvedParty:sortCode>122311</IFWXML_InvolvedParty:sortCode>
+</IFWXML_Arrangement:isManagedByOrgUnit>
+<IFWXML_Arrangement:customer>
+<IFWXML_InvolvedParty:customerName>
+<IFWXML_InvolvedParty:nameText>TALBOT HOUSE SCHOOL LTD</IFWXML_InvolvedParty:nameText>
+</IFWXML_InvolvedParty:customerName>
+</IFWXML_Arrangement:customer>
+</IFWXML_AccountingTransaction:targets>
+</accountingTransaction>
+<accountingTransaction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IFWXML_AccountingTransaction:Transfer">
+<IFWXML_Event:description>                         FR 00490006 122311       </IFWXML_Event:description>
+<IFWXML_AccountingTransaction:originationDate>2017-09-30T00:00:00</IFWXML_AccountingTransaction:originationDate>
+<IFWXML_AccountingTransaction:initiatesMonetaryPosting>
+<IFWXML_AccountingUnit:accountingEffectType>Credit</IFWXML_AccountingUnit:accountingEffectType>
+<IFWXML_AccountingUnit:effectiveDate>2017-09-30T00:00:00</IFWXML_AccountingUnit:effectiveDate>
+<IFWXML_AccountingUnit:amount>
+<IFWXML:theCurrencyAmount>30000.00</IFWXML:theCurrencyAmount>
+<IFWXML:theCurrencyCode>GBP</IFWXML:theCurrencyCode>
+</IFWXML_AccountingUnit:amount>
+</IFWXML_AccountingTransaction:initiatesMonetaryPosting>
+<IFWXML_AccountingTransaction:targets>
+<IFWXML_Common:objectReference xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IFWXML_Arrangement:ProductArrangementObjectReference">
+<IFWXML_Arrangement:accountNumber>06032943</IFWXML_Arrangement:accountNumber>
+</IFWXML_Common:objectReference>
+<IFWXML_Arrangement:isManagedByOrgUnit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IFWXML_InvolvedParty:Branch">
+<IFWXML_InvolvedParty:sortCode>122311</IFWXML_InvolvedParty:sortCode>
+</IFWXML_Arrangement:isManagedByOrgUnit>
+<IFWXML_Arrangement:customer>
+<IFWXML_InvolvedParty:customerName>
+<IFWXML_InvolvedParty:nameText>Talbot House - Savings</IFWXML_InvolvedParty:nameText>
+</IFWXML_InvolvedParty:customerName>
+</IFWXML_Arrangement:customer>
+</IFWXML_AccountingTransaction:targets>
+</accountingTransaction>
+<paymentPostingInstruction>
+<IFWXML_Common:objectReference xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IFWXML_AccountingTransaction:PaymentPostingInstructionObjectReference">
+<IFWXML_Common:refId>1520507132</IFWXML_Common:refId>
+<IFWXML_Common:alternateId>
+<IFWXML_Common:attributeString>ACCOUNT_TYPE</IFWXML_Common:attributeString>
+<IFWXML_Common:value>Personal Account</IFWXML_Common:value>
+</IFWXML_Common:alternateId>
+<IFWXML_Common:alternateId>
+<IFWXML_Common:value>Outbound</IFWXML_Common:value>
+</IFWXML_Common:alternateId>
+</IFWXML_Common:objectReference>
+<IFWXML_AccountingTransaction:scheme>
+<IFWXML_AccountingTransaction:schemeName>GBPTransfer</IFWXML_AccountingTransaction:schemeName>
+</IFWXML_AccountingTransaction:scheme>
+<IFWXML_AccountingTransaction:transactionType>Normal</IFWXML_AccountingTransaction:transactionType>
+</paymentPostingInstruction>
+</IFWXML_WS:ApplyPaymentPostingRequest>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>  
